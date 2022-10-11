@@ -5,8 +5,9 @@
 	"main": "app.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "nodemon app.js",
-		"start-ts": "ts-node-dev src/index.ts"
+		"start": "npm run start:dev",
+		"start-ts": "ts-node-dev src/index.ts",
+    "start:dev":"nodemon app.js"
 	},
 	"keywords": [],
 	"author": "",
