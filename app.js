@@ -7,6 +7,7 @@ const MongodbStore = require('connect-mongodb-session')(session);
 const csrf = require('csurf');
 const flash = require('connect-flash');
 const multer = require('multer');
+const { storage } = require('./util/storage')
 require('dotenv').config()
 
 
@@ -49,7 +50,9 @@ const fileFilter = (req, file, cb) => {
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/images', express.static(path.join(__dirname, 'images')));
-app.use(multer({ storage: fileStorage, fileFilter }).single('image'));
+//app.use(multer({ storage: fileStorage, fileFilter }).single('image'));
+app.use(multer({ storage }).single('image'));
+
 app.use(
   session({
     secret: 'thisIsMySecret',
