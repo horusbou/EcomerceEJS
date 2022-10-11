@@ -1,5 +1,5 @@
 <%if(!!errorMessage){%>
-    <%if(Array.isArray()(errorMessage)){%>
+    <%if(Array.isArray(errorMessage)){%>
       <%  errorMessage.forEach(function(error){%>
         <div class="user-message user-message--error"><%=error.msg%></div>
         <%})%>

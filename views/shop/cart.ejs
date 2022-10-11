@@ -13,12 +13,11 @@
                 <% for(item of products){ %>
                 <!-- Product #1 -->
                 <div class="item">
-                  <div class="buttons">
-                    <span class="delete-btn"></span>
-                    <span class="like-btn"></span>
-                  </div>
                   <form action="/cart/deleteItem" method="post">
-                    <button class="Delete">X</button>
+                    <label>
+                    <span class="delete-btn">X</span>
+                    <input type="submit" class="button" style="display:none"/>
+                    </label>
                     <input type="hidden" name="_csrf" value="<%=csrfToken%>">
                     <input type="hidden" name="_id" value="<%= item.productId._id %>">
                 </form>
@@ -31,13 +30,7 @@
                     <span></span>
                   </div>
                   <div class="quantity">
-                    <button class="plus-btn" type="button" name="button">
-                      +
-                    </button>
                     <input type="text" name="name" value="<%= item.quantity %>">
-                    <button class="minus-btn" type="button" name="button">
-                     -
-                    </button>
                   </div>
 
                   <div class="total-price">$ <%= (item.quantity * item.productId.price).toPrecision(4) %></div>

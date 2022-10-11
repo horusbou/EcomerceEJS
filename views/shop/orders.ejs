@@ -15,11 +15,15 @@
                 <%let totalPrice=0;%>
                 <ul class="orders__products">
                     <% order.products.forEach((item, i) => {%>
-                      <li class="orders__products-item"> <%=item.product.title%> (<%= item.quantity %>)- <a href="/orders/<%=order._id%>">Invoice</a> - <span class="Itemprice"><%= item.quantity %> * <%= item.product.price %> = $<%=item.product.price*item.quantity%></span></li>
+                      <li class="orders__products-item"> 
+                      <%=item.product.title%>
+                      (<%= item.quantity %>)- 
+                      <!-- <a href="/orders/<%=order._id%>">Invoice</a> - -->
+                      <span class="Itemprice"><%= item.quantity %> * <%= item.product.price %> = $<%=item.product.price*item.quantity%></span></li>
                   <%
                   totalPrice+=item.product.price*item.quantity;
                 });%>
-                  <li class="totalPrice">Total Price: <%=totalPrice%></li>
+                  <li class="totalPrice">Total Price: <%=totalPrice%> $</li>
                 </ul>
               </li>
             <%});%>
