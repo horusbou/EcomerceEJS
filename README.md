@@ -3,6 +3,15 @@
 
 [![](https://github.com/jubrito/nodejs-udemy-jubrito/blob/main/Studies/root-nodeapp.gif?raw=true)]()
 
+
+E-Commerce Project
+
+This is a full-stack e-commerce project built using Node.js, Express, and EJS on the backend, and HTML, CSS, and JavaScript on the frontend. The project includes features such as:
+
+- A user login system with express session and authentication
+- A product catalog with filtering and searching capabilities
+- An administrative dashboard for managing products and orders
+
 ## 💻 TECHNOLOGIES
 ### BACK-END ([NodeJS](https://nodejs.org/en/ "NodeJS") + [TypeScript](https://www.typescriptlang.org/ "TypeScript"))
 
